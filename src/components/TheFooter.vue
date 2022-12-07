@@ -54,7 +54,6 @@ export default {
 
 <style scoped>
 footer{
-    border: 1px solid red;
     padding: 50px 10px 30px;
 }
 
