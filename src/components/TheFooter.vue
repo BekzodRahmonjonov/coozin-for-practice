@@ -7,7 +7,7 @@
                         <img src="../assets/logo_coozin.png" alt="footer-logo">
                     </div>
                     <div class="footer__items">
-                        <div class="footer_nav">
+                        <div class="footer__nav">
                             <a href="#" class="nav__item">Наша история</a>
                             <a href="#" class="nav__item">Присоединиться</a>
                             <a href="#" class="nav__item">Блог</a>
@@ -30,8 +30,10 @@
                 <div class="footer__bottom">
                     <div class="footer__lisence">© 2022 Coozin  All Rights Reserved</div>
                     <div class="footer__social">
-                        <p>ПОДПИСЫВАЙТЕСЬ НА НАС</p>
-                        <div class="social__line"></div>
+                        <div class="social__text">
+                            <p>ПОДПИСЫВАЙТЕСЬ НА НАС</p>
+                            <div class="social__line"></div>
+                        </div>
                         <div class="social__images">
                             <a href=""><img src="../assets/insta.png" alt="insta"></a>
                             <a href=""><img src="../assets/facebook.png" alt="facebook"></a>
@@ -52,9 +54,8 @@ export default {
 
 <style scoped>
 footer{
-    height: 362px;
     border: 1px solid red;
-    padding: 50px 0px 30px;
+    padding: 50px 10px 30px;
 }
 
 .footer__top{
@@ -69,6 +70,7 @@ footer{
     max-width: 724px;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .footer__logo{
@@ -89,6 +91,10 @@ footer{
     margin-bottom: 20px;
 }
 
+.nav__item:last-child{
+    margin-bottom: 0px;
+}
+
 .nav__item:hover{
     color: red;
 }
@@ -104,7 +110,7 @@ h3{
 .support__images{
     display: flex;
     justify-content: space-between;
-    width: 210px;
+    width: 200px;
 }
 
 .footer__bottom{
@@ -114,7 +120,7 @@ h3{
     justify-content: space-between;
 }
 
-.footer_lisence{
+.footer__lisence{
     font-weight: 300;
     font-size: 16px;
     line-height: 24px;
@@ -135,15 +141,23 @@ h3{
 }
 
 .social__line{
-    width: 64px;
+    width: 60px;
     border: 1px solid #1F2937;
-    margin: 0px 16px;
+    margin: 0px 10px;
 }
 
+.social__text{
+    display: flex;
+    align-items: center;
+}
 .social__images a{
-    width: 40px;
-    height: 40px;
-    margin: 0px 10px;
+    width: 35px;
+    height: 35px;
+    margin: 0px 5px;
+}
+
+.social__images img{
+    width: 100%;
 }
 
 .social__images{
@@ -151,4 +165,18 @@ h3{
     align-content: center;
 }
 
+.footer__nav , .footer__pay , .footer__support{
+    margin: 0px 10px;
+}
+
+@media (max-width: 768px) {
+    .footer__bottom{
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        margin-top: 30px;
+    }
+    .footer__lisence{
+        margin-top: 5px;
+    }
+}
 </style>
