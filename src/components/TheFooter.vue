@@ -4,7 +4,7 @@
       <div class="footer">
         <div class="footer__menu">
           <div class="footer__menu-logo">
-            <a href="/App.vue"><img src="../assets/icons/logo_coozin.svg" alt="coozin logo" /></a>
+            <a href="../App.vue"><img src="../assets/icons/logo_coozin.svg" alt="coozin logo" /></a>
           </div>
           <div class="footer__menu-items">
             <ul class="footer__menu-nav">
@@ -53,10 +53,9 @@ export default {
 </script>
 
 <style scoped>
-footer {
-  padding: 50px 10px 30px;
+.footer {
+  padding: 50px 0px 30px;
 }
-
 .footer__menu {
   width: 100%;
   display: flex;
@@ -89,7 +88,6 @@ footer {
 }
 
 .footer__menu-nav a{
-  text-decoration: none;
   color: #242c39;
   font-weight: 500;
   font-size: 16px;
@@ -168,10 +166,6 @@ h3 {
 .footer__social-img {
   display: flex;
   align-content: center;
-}
-
-li{
-  list-style: none;
 }
 
 @media (max-width: 768px) {

@@ -29,7 +29,10 @@ export default {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    list-style: none;
 }
+
 .container {
     margin: 0 auto;
     max-width: 1240px;
