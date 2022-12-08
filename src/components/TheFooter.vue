@@ -1,181 +1,195 @@
 <template>
-    <footer>
-        <div class="container">
-            <div class="footer">
-                <div class="footer__top">
-                    <div class="footer__logo">
-                        <img src="../assets/logo_coozin.png" alt="footer-logo">
-                    </div>
-                    <div class="footer__items">
-                        <div class="footer__nav">
-                            <a href="#" class="nav__item">Наша история</a>
-                            <a href="#" class="nav__item">Присоединиться</a>
-                            <a href="#" class="nav__item">Блог</a>
-                        </div>
-                        <div class="footer__pay">
-                            <h3>Безопаская оплата</h3>
-                            <div class="footer__pay-img">
-                                <img src="../assets/apelsin_logo.png" alt="apelsin-logo">
-                            </div>
-                        </div>
-                        <div class="footer__support">
-                            <h3>При поддержке</h3>
-                            <div class="support__images">
-                                <img src="../assets/cola_logo.png" alt="cola-logo">
-                                <img src="../assets/osce_logo.png" alt="osce-logo">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer__bottom">
-                    <div class="footer__lisence">© 2022 Coozin  All Rights Reserved</div>
-                    <div class="footer__social">
-                        <div class="social__text">
-                            <p>ПОДПИСЫВАЙТЕСЬ НА НАС</p>
-                            <div class="social__line"></div>
-                        </div>
-                        <div class="social__images">
-                            <a href=""><img src="../assets/insta.png" alt="insta"></a>
-                            <a href=""><img src="../assets/facebook.png" alt="facebook"></a>
-                            <a href=""><img src="../assets/YT.png" alt="youtube"></a>
-                        </div>
-                    </div>
-                </div>
+  <footer>
+    <div class="container">
+      <div class="footer">
+        <div class="footer__menu">
+          <div class="footer__menu-logo">
+            <a href="/App.vue"><img src="../assets/icons/logo_coozin.svg" alt="coozin logo" /></a>
+          </div>
+          <div class="footer__menu-items">
+            <ul class="footer__menu-nav">
+              <li><a href="#">Наша история</a></li>
+              <li><a href="#">Присоединиться</a></li>
+              <li><a href="#">Блог</a></li>
+            </ul>
+            <div class="footer__payment gap">
+              <h3>Безопаская оплата</h3>
+              <div class="footer__payment-img">
+                <img src="../assets/icons/apelsin_logo.svg" alt="apelsin logo" />
+              </div>
             </div>
+            <div class="footer__support gap">
+              <h3>При поддержке</h3>
+              <div class="footer__support-img">
+                <img src="../assets/icons/cola.svg" alt="cola logo" />
+                <img src="../assets/icons/osce.svg" alt="osce logo" />
+              </div>
+            </div>
+          </div>
         </div>
-    </footer>
+        <div class="footer__contact">
+          <h3 class="footer__contact-h3">© 2022 Coozin All Rights Reserved</h3>
+          <div class="footer__social">
+            <div class="footer__social-text">
+              <p>ПОДПИСЫВАЙТЕСЬ НА НАС</p>
+              <div class="footer__social-line"></div>
+            </div>
+            <div class="footer__social-img">
+              <a href=""><img src="../assets/icons/insta.svg" alt="insta" /></a>
+              <a href=""><img src="../assets/icons/facebook.svg" alt="facebook" /></a>
+              <a href=""><img src="../assets/icons/yt.svg" alt="youtube" /></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 </template>
 
 <script>
 export default {
-    name: "TheFooter"
-}
+  name: "TheFooter",
+};
 </script>
 
 <style scoped>
-footer{
-    padding: 50px 10px 30px;
+footer {
+  padding: 50px 10px 30px;
 }
 
-.footer__top{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+.footer__menu {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
 }
 
-.footer__items{
-    width: 100%;
-    max-width: 724px;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
+.footer__menu-items {
+  width: 100%;
+  max-width: 724px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
-.footer__logo{
-    width: 148px;
+.footer__menu-logo {
+  width: 148px;
 }
 
-.footer__logo>img{
-    width: 100%;
+.footer__menu-logo img , .footer__menu-logo a{
+  width: 100%;
 }
 
-.nav__item{
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    color: #242C39;
-    text-decoration: none;
-    display: block;
-    margin-bottom: 20px;
+.footer__menu-nav{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.nav__item:last-child{
-    margin-bottom: 0px;
+.footer__menu-nav a{
+  text-decoration: none;
+  color: #242c39;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
 }
 
-.nav__item:hover{
-    color: red;
+.footer__menu-nav a:hover {
+  color: red;
 }
 
-h3{
-    color: #374151;
-    font-weight: 600;
-    font-size: 16px;
-    line-height: 24px;
-    margin-bottom: 19px;
+h3 {
+  color: #374151;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
 }
 
-.support__images{
-    display: flex;
-    justify-content: space-between;
-    width: 200px;
+.gap{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.footer__bottom{
-    margin-top: 100px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+.footer__support-img {
+  display: flex;
+  gap: 30px;
 }
 
-.footer__lisence{
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 24px;
-    color: #1F2937;
-}
-.footer__social{
-    display: flex;
-    align-items: center;
+.footer__contact {
+  margin-top: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.footer__social p{
-    font-weight: 600;
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 0.1em;
-    color: #1F2937;
-    position: relative;
+.footer__contact-h3 {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: #1f2937;
+}
+.footer__social {
+  display: flex;
+  align-items: center;
 }
 
-.social__line{
-    width: 60px;
-    border: 1px solid #1F2937;
-    margin: 0px 10px;
+.footer__social p {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  color: #1f2937;
+  position: relative;
 }
 
-.social__text{
-    display: flex;
-    align-items: center;
-}
-.social__images a{
-    width: 35px;
-    height: 35px;
-    margin: 0px 5px;
+.footer__social-line {
+  width: 60px;
+  border: 1px solid #1f2937;
+  margin: 0px 10px;
 }
 
-.social__images img{
-    width: 100%;
+.footer__social-text {
+  display: flex;
+  align-items: center;
+}
+.footer__social-img a {
+  width: 35px;
+  height: 35px;
+  margin: 0px 5px;
 }
 
-.social__images{
-    display: flex;
-    align-content: center;
+.footer__social-img img {
+  width: 100%;
 }
 
-.footer__nav , .footer__pay , .footer__support{
-    margin: 0px 10px;
+.footer__social-img {
+  display: flex;
+  align-content: center;
+}
+
+li{
+  list-style: none;
 }
 
 @media (max-width: 768px) {
-    .footer__bottom{
-        flex-direction: column-reverse;
-        justify-content: space-between;
-        margin-top: 30px;
-    }
-    .footer__lisence{
-        margin-top: 5px;
-    }
+  .footer__contact {
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  .footer__contact-h3 {
+    margin-top: 5px;
+  }
+}
+@media (max-width: 480px) {
+  .footer__social-text{
+    display: none;
+  }
+  .footer__social-img{
+    gap: 30px;
+  }
 }
 </style>
